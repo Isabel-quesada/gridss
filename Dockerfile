@@ -139,7 +139,7 @@ RUN Rscript -e 'options(Ncpus=8L, repos="https://cloud.r-project.org/");install.
 RUN Rscript -e 'options(Ncpus=8L, repos="https://cloud.r-project.org/");BiocManager::install(ask=FALSE, pkgs=c( "copynumber", "StructuralVariantAnnotation", "VariantAnnotation", "rtracklayer", "BSgenome", "Rsamtools", "biomaRt", "org.Hs.eg.db", "TxDb.Hsapiens.UCSC.hg19.knownGene", "TxDb.Hsapiens.UCSC.hg38.knownGene" ))'
 # Install GRIDSS
 ARG GRIDSS_VERSION
-ENV GRIDSS_VERSION=${GRIDSS_VERSION}
+ENV GRIDSS_VERSION=2.13.2
 ENV GRIDSS_JAR=/opt/gridss/gridss-${GRIDSS_VERSION}-gridss-jar-with-dependencies.jar
 LABEL software="GRIDSS"
 LABEL software.version="$GRIDSS_VERSION"
